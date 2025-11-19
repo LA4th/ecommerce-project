@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import TheHeader from './components/header/TheHeader'
-import TheFeaturedProducts from './components/featuredProducts/TheFeaturedProducts'
+import TheFeaturedProducts from './components/featured_products/TheFeaturedProducts'
 import DataMedicine from './components/data/DataMedicine.json'
 
 function App() {
@@ -10,10 +8,10 @@ function App() {
 
   return (
     <>
-      {/* <TheHeader /> */}
+      <TheHeader />
       <TheFeaturedProducts itemsList={itemsList} />
     </>
-  )
+  );
 }
 
 export default App
