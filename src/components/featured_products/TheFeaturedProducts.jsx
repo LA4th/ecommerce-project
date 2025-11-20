@@ -1,5 +1,5 @@
 import React from "react";
-import TheCard from "./TheCard";
+import Card from "./Card";
 
 export default function TheFeaturedProducts ({ itemsList, addCarts }) {
 
@@ -10,7 +10,7 @@ export default function TheFeaturedProducts ({ itemsList, addCarts }) {
         <p className="text-vintageGray">Always read the label and consult a pharmacist if unsure.</p>
       </div>
       {/* CARD RENDER */}
-      <TheCard itemList={ itemsList } addCart={ addCarts } />
+      <Card itemList={ itemsList } addCart={ addCarts } />
     </>
   );
 };

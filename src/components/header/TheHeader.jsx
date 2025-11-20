@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import logoMicaClick from "/logos/micaclick_logo.svg"
 import Buttons from "../ui/Buttons";
-import TheCartSideBar from "./TheCartSideBar";
-import TheSearchBar from "./TheSearchBar";
+import TheCartSideBar from "./CartSideBar";
+import TheSearchBar from "./SearchBar";
 import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";

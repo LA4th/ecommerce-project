@@ -1,19 +1,20 @@
 import React from "react";
 import Buttons from "../ui/Buttons";
-import TheAddCartItems from "./TheAddCartItems";
+import MobileViewPaymentMethod from "./MobileViewPaymentMethod";
 
-export default function ThePaymentMethod ({ addItem }) {
+export default function ThePaymentMethod ({ addCartItems }) {
 
 
   return (
     <>
-      <header>
-        <Buttons />
-        <h1></h1>
-        <Buttons />
-      </header>
-      {/* RENDER ADD ITEMS */}
-      <TheAddCartItems addCartItems={ addItem } />
+      {/* MOBILE VIEW */}
+      <div>
+        <MobileViewPaymentMethod addCartItems={ addCartItems } />
+      </div>
+      {/* DESKTOP VIEW */}
+      <div>
+
+      </div>
     </>
   );
 };

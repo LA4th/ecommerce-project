@@ -10,15 +10,29 @@ function App() {
 
   const handleAddCart = (items) => {
     const newCartItems = [...cartItems, items];
-
     setCartItems(newCartItems);
+  };
+
+  const deleteItem = () => {
+
+  };
+
+  const defaultBrandPrice = () => {
+    const infoDefault = cartItems.map((infoValue, _) => {
+      infoValue.prices[0]
+    })
+    return infoDefault;
+  };
+
+  const getToTalPrice = () => {
+    
   };
 
   return (
     <>
       {/* <TheHeader /> */}
       <TheFeaturedProducts itemsList={ itemsList } addCarts={ handleAddCart } />
-      <ThePaymentMethod addItem={ cartItems } />
+      <ThePaymentMethod addCartItems={ cartItems } />
     </>
   );
 }

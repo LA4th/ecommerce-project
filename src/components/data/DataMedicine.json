@@ -1,17 +1,20 @@
 {
-  "source": "assistant_examples",
-  "note": "General examples only — sundin ang label at kumunsulta sa pharmacist o doktor kung hindi sigurado.",
   "medicines_by_symptom": [
     {
       "symptom": "Lagnat / Sakit ng Ulo / Pananakit ng Katawan",
       "medicines": [
         {
           "generic_name": "Paracetamol",
-          "common_brands": ["Biogesic", "Tempra"],
+          "common_brands": ["Generic", "Biogesic", "Tempra"],
           "typical_use": "Bawas lagnat at pansamantalang pananakit",
           "otc_available": true,
           "dose_note": "Sundin ang label; huwag lumabis sa inirekomendang dose",
-          "image": "https://tajlifesciences.com/wp-content/uploads/Paracetamol-500-MG-Tablet-manufcaturer-india-Taj-Life-Sciences-6-scaled.jpg"
+          "image": "https://tajlifesciences.com/wp-content/uploads/Paracetamol-500-MG-Tablet-manufcaturer-india-Taj-Life-Sciences-6-scaled.jpg",
+          "prices": [
+            { "brand": "Generic", "price": 35 },
+            { "brand": "Biogesic", "price": 55 },
+            { "brand": "Tempra", "price": 60 }
+          ]
         }
       ]
     },
@@ -20,19 +23,27 @@
       "medicines": [
         {
           "generic_name": "Phenylephrine",
-          "common_brands": ["Neozep"],
+          "common_brands": ["Generic", "Neozep"],
           "typical_use": "Nababawasan ang nasal congestion",
           "otc_available": true,
           "dose_note": "Iwasan kung may mataas na presyon; sundin ang label",
-          "image": "https://tse4.mm.bing.net/th/id/OIP.19zRRf7UwEbOuPE-0LsnCAHaFS?rs=1&pid=ImgDetMain&o=7&rm=3"
+          "image": "https://tse4.mm.bing.net/th/id/OIP.19zRRf7UwEbOuPE-0LsnCAHaFS?rs=1&pid=ImgDetMain&o=7&rm=3",
+          "prices": [
+            { "brand": "Generic", "price": 40 },
+            { "brand": "Neozep", "price": 65 }
+          ]
         },
         {
           "generic_name": "Pseudoephedrine",
-          "common_brands": ["Decolgen"],
+          "common_brands": ["Generic", "Decolgen"],
           "typical_use": "Decongestant para sa sipon",
           "otc_available": true,
           "dose_note": "May ilang restrictions sa pagbili sa ibang bansa; sundin ang label",
-          "image": "https://images-its.chemistdirect.co.uk/Pseudoephedrine-60mg-(Sudafed-Alternative).jpg?o=i0nFmKfgbLK54TcuCHKxIN5Zk3Ij&V=IAEu&w=800&h=800"
+          "image": "https://images-its.chemistdirect.co.uk/Pseudoephedrine-60mg-(Sudafed-Alternative).jpg?o=i0nFmKfgbLK54TcuCHKxIN5Zk3Ij&V=IAEu&w=800&h=800",
+          "prices": [
+            { "brand": "Generic", "price": 45 },
+            { "brand": "Decolgen", "price": 80 }
+          ]
         }
       ]
     },
@@ -41,19 +52,27 @@
       "medicines": [
         {
           "generic_name": "Dextromethorphan",
-          "common_brands": ["Robitussin DM"],
+          "common_brands": ["Generic", "Robitussin DM"],
           "typical_use": "Pang-ugat ng tuyong ubo (cough suppressant)",
           "otc_available": true,
           "dose_note": "Huwag pagsamahin sa ilang antidepressants; sundin ang label",
-          "image": "https://th.bing.com/th/id/R.6d265bea463264ccaf5d1803697944a2?rik=W8uoFbGQr2vUZQ&riu=http%3a%2f%2fft-pharma.com%2fwp-content%2fuploads%2f2020%2f09%2fDextromethophan.jpg&ehk=YM2jMBecZsYYWmBDogSY3sGoLQjAls6vTbncY0yaxAE%3d&risl=&pid=ImgRaw&r=0"
+          "image": "https://th.bing.com/th/id/R.6d265bea463264ccaf5d1803697944a2?rik=W8uoFbGQr2vUZQ&riu=http%3a%2f%2fft-pharma.com%2fwp-content%2fuploads%2f2020%2f09%2fDextromethophan.jpg&ehk=YM2jMBecZsYYWmBDogSY3sGoLQjAls6vTbncY0yaxAE%3d&risl=&pid=ImgRaw&r=0",
+          "prices": [
+            { "brand": "Generic", "price": 60 },
+            { "brand": "Robitussin DM", "price": 100 }
+          ]
         },
         {
           "generic_name": "Ambroxol",
-          "common_brands": ["Mucosolvan"],
+          "common_brands": ["Generic", "Mucosolvan"],
           "typical_use": "Expectorant / mucolytic — para sa ubo na may plema",
           "otc_available": true,
           "dose_note": "Kung may malalang sintomas, kumonsulta sa doktor",
-          "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00029309_ambroxol_danapha_60ml_4338_62a7_large_6bbf97b03a.jpg"
+          "image": "https://cdn.nhathuoclongchau.com.vn/unsafe/https://cms-prod.s3-sgn09.fptcloud.com/00029309_ambroxol_danapha_60ml_4338_62a7_large_6bbf97b03a.jpg",
+          "prices": [
+            { "brand": "Generic", "price": 75 },
+            { "brand": "Mucosolvan", "price": 130 }
+          ]
         }
       ]
     },
@@ -62,19 +81,29 @@
       "medicines": [
         {
           "generic_name": "Cetirizine",
-          "common_brands": ["Allerkid", "Virlix"],
+          "common_brands": ["Generic", "Allerkid", "Virlix"],
           "typical_use": "Pang-anti-histamine para sa allergy symptoms",
           "otc_available": true,
           "dose_note": "Maaaring magdulot ng pagkaantok sa ilang tao",
-          "image": "https://ph-test-11.slatic.net/p/9ec7318953dd4b52c47dac4fd5b7cb01.jpg"
+          "image": "https://ph-test-11.slatic.net/p/9ec7318953dd4b52c47dac4fd5b7cb01.jpg",
+          "prices": [
+            { "brand": "Generic", "price": 60 },
+            { "brand": "Allerkid", "price": 120 },
+            { "brand": "Virlix", "price": 115 }
+          ]
         },
         {
           "generic_name": "Loratadine",
-          "common_brands": ["Claritin", "Allerta"],
+          "common_brands": ["Generic", "Claritin", "Allerta"],
           "typical_use": "Non-drowsy antihistamine para sa allergy",
           "otc_available": true,
           "dose_note": "Mas kaunting sedative effect kumpara sa ibang antihistamines",
-          "image": "https://www.cutpricepharmacy.com.au/cdn/shop/files/s-l1600_d082dfcd-e0f1-4e57-a9cf-68713b4ff4a7_1024x1024.jpg?v=1709534468"
+          "image": "https://www.cutpricepharmacy.com.au/cdn/shop/files/s-l1600_d082dfcd-e0f1-4e57-a9cf-68713b4ff4a7_1024x1024.jpg?v=1709534468",
+          "prices": [
+            { "brand": "Generic", "price": 65 },
+            { "brand": "Claritin", "price": 150 },
+            { "brand": "Allerta", "price": 120 }
+          ]
         }
       ]
     },
@@ -82,20 +111,29 @@
       "symptom": "Acid Reflux / Hyperacidity",
       "medicines": [
         {
-          "generic_name": "Antacids (combination of aluminum/magnesium/calcium compounds)",
-          "common_brands": ["Kremil-S", "Tums"],
+          "generic_name": "Antacids (aluminum/magnesium/calcium)",
+          "common_brands": ["Generic", "Kremil-S", "Tums"],
           "typical_use": "Pansamantalang lunas sa heartburn at acidity",
           "otc_available": true,
           "dose_note": "Huwag sobra-sobra; sundin ang timing kung umiinom ng ibang gamot",
-          "image": "https://ricksonremedies.com/image/cache/catalog/Product%20Images/Antacid/Antaric-1000x1000.JPG"
+          "image": "https://ricksonremedies.com/image/cache/catalog/Product%20Images/Antacid/Antaric-1000x1000.JPG",
+          "prices": [
+            { "brand": "Generic", "price": 15 },
+            { "brand": "Kremil-S", "price": 30 },
+            { "brand": "Tums", "price": 50 }
+          ]
         },
         {
           "generic_name": "Omeprazole",
-          "common_brands": ["(various OTC brands)"],
+          "common_brands": ["Generic", "(various OTC brands)"],
           "typical_use": "Proton pump inhibitor para sa mas matagal na kontrol ng stomach acid",
           "otc_available": true,
           "dose_note": "Karaniwang taken once daily; sundin ang label o gamotang payo",
-          "image": "https://image.made-in-china.com/2f0j00LkPVEDbtqiGj/Gastrointestinal-Drug-Omeprazole-Enteric-Capsule-20mg-Shinepharm.webp"
+          "image": "https://image.made-in-china.com/2f0j00LkPVEDbtqiGj/Gastrointestinal-Drug-Omeprazole-Enteric-Capsule-20mg-Shinepharm.webp",
+          "prices": [
+            { "brand": "Generic", "price": 80 },
+            { "brand": "Various OTC Brands", "price": 140 }
+          ]
         }
       ]
     },
@@ -104,19 +142,27 @@
       "medicines": [
         {
           "generic_name": "Loperamide",
-          "common_brands": ["Diatabs"],
+          "common_brands": ["Generic", "Diatabs"],
           "typical_use": "Pansamantalang kontrol sa acute non-bloody diarrhea",
           "otc_available": true,
           "dose_note": "Hindi inirerekomenda kung may mataas na lagnat o dugo sa dumi; kumunsulta sa doktor kung malubha",
-          "image": "https://getmeds.ph/uploads/product/e16b85a0922647905db5e6728b7cd6ae.jpg"
+          "image": "https://getmeds.ph/uploads/product/e16b85a0922647905db5e6728b7cd6ae.jpg",
+          "prices": [
+            { "brand": "Generic", "price": 30 },
+            { "brand": "Diatabs", "price": 60 }
+          ]
         },
         {
           "generic_name": "Oral Rehydration Solution (ORS)",
-          "common_brands": ["Hydrite"],
+          "common_brands": ["Generic", "Hydrite"],
           "typical_use": "Pagpapanumbalik ng electrolytes at pag-iwas sa dehydration",
           "otc_available": true,
           "dose_note": "Mahalaga sa hydration; sundin ang mixing instructions",
-          "image": "https://i0.wp.com/www.directrelief.org/wp-content/uploads/ORS-no-tape-1c.jpg?ssl=1"
+          "image": "https://i0.wp.com/www.directrelief.org/wp-content/uploads/ORS-no-tape-1c.jpg?ssl=1",
+          "prices": [
+            { "brand": "Generic", "price": 15 },
+            { "brand": "Hydrite", "price": 30 }
+          ]
         }
       ]
     }
