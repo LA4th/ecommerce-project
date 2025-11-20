@@ -2,7 +2,7 @@ import React from "react";
 import Buttons from "../ui/Buttons";
 import { FaShoppingCart } from "react-icons/fa";
 
-export default function TheCard ({ itemList }) {
+export default function TheCard ({ itemList, addCart }) {
 
   return (
     <>
@@ -20,7 +20,7 @@ export default function TheCard ({ itemList }) {
                           <img src={singleItem.image} alt={singleItem.generic_name + "_img"} className="w-full min-h-50 object-cover" />
                           <div className="px-2 w-full h-full flex flex-col">
                             <a href="" className="text-vintageGray line-clamp-2">{singleItem.generic_name}</a>
-                            <Buttons id="btnAddCart" type="button" onClick={() => {}} className="bg-vintageGreen text-white p-1.5 rounded-md mt-auto mb-3 flex flex-row items-center gap-x-1.5 justify-center" btnName="Add to Cart" icon={<FaShoppingCart />}  />
+                            <Buttons id="btnAddCart" type="button" onClick={() => addCart(singleItem)} className="bg-vintageGreen text-white p-1.5 rounded-md mt-auto mb-3 flex flex-row items-center gap-x-1.5 justify-center" btnName="Add to Cart" icon={<FaShoppingCart />}  />
                           </div>
                         </div>
                       </li>
