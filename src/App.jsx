@@ -1,40 +1,41 @@
-import { useState } from 'react'
-import TheHeader from './components/header/TheHeader'
-import TheFeaturedProducts from './components/featured_products/TheFeaturedProducts'
-import ThePaymentMethod from './components/proceed_payment/ThePaymentMethod'
-import DataMedicine from './components/data/DataMedicine.json'
+import { useState, useEffect } from "react";
+import TheHeader from "./components/header/TheHeader";
+import TheFeaturedProducts from "./components/featured_products/TheFeaturedProducts";
+import ThePaymentMethod from "./components/proceed_payment/ThePaymentMethod";
+import DataMedicine from "./components/data/DataMedicine.json";
 
 function App() {
-  const [itemsList, setItemsList] = useState(DataMedicine);
+  const [itemsList, setItemsList] = useState(null);
   const [cartItems, setCartItems] = useState([]);
-
-  const handleAddCart = (items) => {
-    const newCartItems = [...cartItems, items];
-    setCartItems(newCartItems);
-  };
-
-  const deleteItem = () => {
-
-  };
-
-  const defaultBrandPrice = () => {
-    const infoDefault = cartItems.map((infoValue, _) => {
-      infoValue.prices[0]
-    })
-    return infoDefault;
-  };
-
-  const getToTalPrice = () => {
-    
-  };
+  useEffect(() => {
+    const addID = DataMedicine.medicines_by_symptom.map((medicinesGroup) => {
+      return {
+        ...medicinesGroup,
+        id: Date.now() + Math.random(),
+        medicines: medicinesGroup.medicines.map((medicinesSingle) => {
+          return {
+            ...medicinesSingle,
+            id: Date.now() + Math.random(),
+          };
+        }),
+      };
+    });
+    setItemsList({ medicines_by_symptom: addID });
+  }, []);
 
   return (
     <>
-      {/* <TheHeader /> */}
-      <TheFeaturedProducts itemsList={ itemsList } addCarts={ handleAddCart } />
-      <ThePaymentMethod addCartItems={ cartItems } />
+      <TheHeader />
+      {itemsList && (
+        <TheFeaturedProducts
+          itemsList={itemsList}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+        />
+      )}
+      {/* <ThePaymentMethod  /> */}
     </>
   );
 }
 
-export default App
+export default App;

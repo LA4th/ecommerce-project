@@ -4,7 +4,7 @@ import AddCartItems from "./AddCartItems";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaRegTrashAlt } from "react-icons/fa";
 
-export default function MobileViewPaymentMethod ({ addCartItems }) {
+export default function MobileViewPaymentMethod () {
 
   return (
     <>
@@ -13,7 +13,7 @@ export default function MobileViewPaymentMethod ({ addCartItems }) {
         <h1 className="text-2xl font-bold">Review Your Order</h1>
         <Buttons id="btnDeleteAction" type="button" onClick={ () => {} } className="text-3xl" icon={ <FaRegTrashAlt /> } />
       </header>
-      <AddCartItems addCartItems={ addCartItems } />
+      <AddCartItems />
     </>
   );
 };

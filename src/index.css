@@ -12,9 +12,9 @@
   --color-vintageGreen: #32744b;
 }
 
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 body {
   @apply font-inter;
