@@ -23,18 +23,20 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route
-        path="/"
-        element={
-          <PageLanding
-            itemsList={itemsList}
-            cartItems={cartItems}
-            setCartItems={setCartItems}
-          />
-        }
-      />
-    </Routes>
+    <>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <PageLanding
+              itemsList={itemsList}
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+            />
+          }
+        />
+      </Routes>
+    </>
   );
 }
 

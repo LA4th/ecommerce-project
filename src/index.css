@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Momo+Trust+Display&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -7,16 +7,16 @@
   --font-momoTrust: "Momo Trust Display", sans-serif;
   /* CUSTOME COLOR */
   --color-vintageBlack: #222831;
-  --color-vintageGray: #393E46;
-  --color-vintageWhite: #F9F8F6;
+  --color-vintageGray: #393e46;
+  --color-vintageWhite: #f9f8f6;
   --color-vintageGreen: #32744b;
 }
 
-/* * {
+* {
   border: 1px solid red;
-} */
+}
 
 body {
   @apply font-inter;
-  @apply font-stretch-condensed
+  @apply font-stretch-condensed;
 }
