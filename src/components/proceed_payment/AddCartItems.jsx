@@ -3,13 +3,13 @@ import Buttons from "../ui/Buttons.jsx";
 import { CiCircleMinus } from "react-icons/ci";
 import { CiCirclePlus } from "react-icons/ci";
 
-export default function AddCartItems() {
+export default function AddCartItems({ cartItems }) {
   return (
     <>
       <ul className="flex flex-col gap-y-1.5">
-        {addCartItems.map((itemsCart) => {
+        {cartItems.map((itemsCart) => {
           return (
-            <li key={itemsCart.objectID}>
+            <li key={itemsCart.id}>
               <div className="flex flex-row items-center justify-between">
                 <div className="flex flex-row">
                   <img
@@ -39,7 +39,9 @@ export default function AddCartItems() {
                     className="text-4xl"
                     icon={<CiCircleMinus />}
                   />
-                  <span className="w-8 text-center font-bold">1</span>
+                  <span className="w-8 text-center font-bold">
+                    {itemsCart.quantity}
+                  </span>
                   <Buttons
                     id="btnIncement"
                     type="button"

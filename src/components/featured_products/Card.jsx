@@ -5,7 +5,7 @@ import { FaShoppingCart } from "react-icons/fa";
 export default function Card({ itemsList, cartItems, setCartItems }) {
   const handleCart = (items) => {
     const existAddItems = cartItems.find((cartItem) => {
-      cartItem.id === items.id;
+      return cartItem.id === items.id;
     });
 
     if (existAddItems) {
@@ -13,7 +13,7 @@ export default function Card({ itemsList, cartItems, setCartItems }) {
         if (cartItem.id === items.id) {
           return {
             ...cartItem,
-            quantity: quantity + 1,
+            quantity: cartItem.quantity + 1,
           };
         } else {
           return cartItem;
@@ -26,10 +26,10 @@ export default function Card({ itemsList, cartItems, setCartItems }) {
         {
           ...items,
           quantity: 1,
+          setBrand: items.prices[0],
         },
       ]);
     }
-    console.log(cartItems);
   };
 
   return (

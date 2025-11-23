@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import TheHeader from "./components/header/TheHeader";
-import TheFeaturedProducts from "./components/featured_products/TheFeaturedProducts";
-import ThePaymentMethod from "./components/proceed_payment/ThePaymentMethod";
+import { Routes, Route } from "react-router";
+import PageLanding from "./pages/PageLanding";
 import DataMedicine from "./components/data/DataMedicine.json";
 
 function App() {
@@ -24,17 +23,18 @@ function App() {
   }, []);
 
   return (
-    <>
-      <TheHeader />
-      {itemsList && (
-        <TheFeaturedProducts
-          itemsList={itemsList}
-          cartItems={cartItems}
-          setCartItems={setCartItems}
-        />
-      )}
-      {/* <ThePaymentMethod  /> */}
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <PageLanding
+            itemsList={itemsList}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+          />
+        }
+      />
+    </Routes>
   );
 }
 

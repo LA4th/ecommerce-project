@@ -1,20 +1,15 @@
 import React from "react";
-import Buttons from "../ui/Buttons";
 import MobileViewPaymentMethod from "./MobileViewPaymentMethod";
 
-export default function ThePaymentMethod () {
-
-
+export default function ThePaymentMethod({ cartItems }) {
   return (
     <>
       {/* MOBILE VIEW */}
-      <div>
-        <MobileViewPaymentMethod />
+      <div className="flex flex-col gap-y-5">
+        <MobileViewPaymentMethod cartItems={cartItems} />
       </div>
       {/* DESKTOP VIEW */}
-      <div>
-
-      </div>
+      <div></div>
     </>
   );
-};
+}
