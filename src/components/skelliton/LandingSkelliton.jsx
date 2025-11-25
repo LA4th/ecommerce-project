@@ -1,14 +1,17 @@
 import React from "react";
 
 export default function LandingSkelliton() {
-  const numList = 5;
+  const numList = Array.from({ length: 3 });
   return (
     <>
-      <ul className="grid grid-cols-2">
-        {numList.map((_, listIndex) => {
+      <ul className="w-full grid grid-cols-2 md:grid-cols-4">
+        {numList.map((__, listIndex) => {
           return (
-            <li key={listIndex} className="">
-              <div className="min-h-80 w-full max-w-full bg-gray-500 animate-pulse"></div>
+            <li
+              key={listIndex}
+              className="p-1 w-full min-h-80 flex items-center"
+            >
+              <div className="bg-vintageGray w-full h-full animate-pulse"></div>
             </li>
           );
         })}

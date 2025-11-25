@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router";
 import PageLanding from "./pages/PageLanding";
+import PageProceedPayment from "./pages/PageProceedPayment.jsx";
+import PageDevelop from "./pages/PageDevelop.jsx";
 import DataMedicine from "./components/data/DataMedicine.json";
 
 function App() {
@@ -35,6 +37,11 @@ function App() {
             />
           }
         />
+        <Route
+          path="/payment-method"
+          element={<PageProceedPayment cartItems={cartItems} />}
+        />
+        <Route path="/develop" element={<PageDevelop />} />
       </Routes>
     </>
   );
