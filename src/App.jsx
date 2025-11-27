@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Routes, Route } from "react-router";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PageLanding from "./pages/PageLanding";
 import PageProceedPayment from "./pages/PageProceedPayment.jsx";
 import PageDevelop from "./pages/PageDevelop.jsx";
@@ -8,6 +8,7 @@ import DataMedicine from "./components/data/DataMedicine.json";
 function App() {
   const [itemsList, setItemsList] = useState(null);
   const [cartItems, setCartItems] = useState([]);
+
   useEffect(() => {
     const addID = DataMedicine.medicines_by_symptom.map((medicinesGroup) => {
       return {
@@ -25,7 +26,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
       <Routes>
         <Route
           path="/"
@@ -39,11 +40,16 @@ function App() {
         />
         <Route
           path="/payment-method"
-          element={<PageProceedPayment cartItems={cartItems} />}
+          element={
+            <PageProceedPayment
+              cartItems={cartItems}
+              setCartItems={setCartItems}
+            />
+          }
         />
         <Route path="/develop" element={<PageDevelop />} />
       </Routes>
-    </>
+    </BrowserRouter>
   );
 }
 

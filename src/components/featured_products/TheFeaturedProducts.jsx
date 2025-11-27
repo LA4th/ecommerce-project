@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useState, useEffect, use } from "react";
 import Card from "./Card";
+import LandingSkelliton from "../ui/skelliton/LandingSkelliton";
 
 export default function TheFeaturedProducts({
   itemsList,
   cartItems,
   setCartItems,
 }) {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1800);
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <>
       <div className="flex flex-col">
@@ -15,11 +23,15 @@ export default function TheFeaturedProducts({
         </p>
       </div>
       {/* CARD RENDER */}
-      <Card
-        itemsList={itemsList}
-        cartItems={cartItems}
-        setCartItems={setCartItems}
-      />
+      {loading ? (
+        <LandingSkelliton />
+      ) : (
+        <Card
+          itemsList={itemsList}
+          cartItems={cartItems}
+          setCartItems={setCartItems}
+        />
+      )}
     </>
   );
 }

@@ -5,6 +5,7 @@ import TheSearchBar from "./SearchBar";
 import { FaShoppingCart } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 export default function MobileViewHeader({ openSideBar, setOpenSideBar }) {
   return (
@@ -35,7 +36,7 @@ export default function MobileViewHeader({ openSideBar, setOpenSideBar }) {
 
         {/* LOGO */}
         <div className="m-auto flex items-center">
-          <a href="" className="flex flex-row gap-x-1.5 items-end">
+          <a href="/" className="flex flex-row gap-x-1.5 items-end">
             <img
               src={logoMicaClick}
               alt="MicaClick_Logo"
@@ -46,9 +47,9 @@ export default function MobileViewHeader({ openSideBar, setOpenSideBar }) {
             </h1>
           </a>
         </div>
-        <a href="#">
+        <Link to="/payment-method">
           <FaShoppingCart className="text-3xl text-vintageGreen" />
-        </a>
+        </Link>
       </div>
       {/* FILTER ITEMS */}
       <div className="bg-white px-4 py-1 w-full max-w-full flex flex-row items-center rounded-md">

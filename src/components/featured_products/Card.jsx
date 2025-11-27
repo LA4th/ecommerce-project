@@ -30,6 +30,7 @@ export default function Card({ itemsList, cartItems, setCartItems }) {
         },
       ]);
     }
+    console.log(cartItems);
   };
 
   return (

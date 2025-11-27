@@ -5,13 +5,14 @@ import TheCartSideBar from "./CartSideBar";
 import TheSearchBar from "./SearchBar";
 import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function DesktopViewHeader() {
   return (
     <>
       {/* LOGO */}
       <div className="flex items-center">
-        <a href="" className="flex flex-row gap-x-1.5 items-end">
+        <a href="/" className="flex flex-row gap-x-1.5 items-end">
           <img
             src={logoMicaClick}
             alt="MicaClick_Logo"
@@ -34,12 +35,9 @@ export default function DesktopViewHeader() {
           onClick={() => {}}
           icon={<FaUser className="text-2xl text-vintageGray" />}
         />
-        <Buttons
-          id="btnCart"
-          type="button"
-          onClick={() => {}}
-          icon={<FaShoppingCart className="text-2xl text-vintageGreen" />}
-        />
+        <Link to="/payment-method">
+          <FaShoppingCart className="text-2xl text-vintageGreen" />
+        </Link>
       </div>
       {/* CART SIDEBAR */}
       <TheCartSideBar />

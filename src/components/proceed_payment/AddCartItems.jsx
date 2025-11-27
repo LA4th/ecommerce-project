@@ -3,7 +3,7 @@ import Buttons from "../ui/Buttons.jsx";
 import { CiCircleMinus } from "react-icons/ci";
 import { CiCirclePlus } from "react-icons/ci";
 
-export default function AddCartItems({ cartItems }) {
+export default function AddCartItems({ cartItems, setCartItems }) {
   return (
     <>
       <ul className="flex flex-col gap-y-1.5">
