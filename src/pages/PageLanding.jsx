@@ -19,10 +19,12 @@ export default function PageLanding({
   };
 
   return (
-    <div className="absolute">
-      <TheHeader itemsSearch={itemsSearch} setItemsSearch={setItemsSearch} />
+    <div className="absolute w-full max-w-full min-h-screen">
+      <div className="fixed z-10 top-0 w-full">
+        <TheHeader itemsSearch={itemsSearch} setItemsSearch={setItemsSearch} />
+      </div>
       <NotifMessage
-        containerClassName={`fixed z-10 w-1/2 h-10 flex items-center justify-center rounded-md bg-lightGreen transition-all duration-300 ${
+        containerClassName={`fixed top-27 z-50 w-1/2 h-10 flex items-center justify-center rounded-r-md bg-lightGreen transition-all duration-300 ${
           showNotif
             ? "opacity-100 translate-x-0"
             : "opacity-0 -translate-x-5 pointer-events-none"
@@ -30,16 +32,19 @@ export default function PageLanding({
         message="Item Added!"
         messageClassName="font-bold text-vintageBlack"
       />
-      {itemsList && (
-        <TheFeaturedProducts
-          itemsList={itemsList}
-          cartItems={cartItems}
-          setCartItems={setCartItems}
-          triggerNotif={triggerNotif}
-          itemsSearch={itemsSearch}
-          setItemsSearch={setItemsSearch}
-        />
-      )}
+
+      <div className="mt-30 w-full px-1.5">
+        {itemsList && (
+          <TheFeaturedProducts
+            itemsList={itemsList}
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+            triggerNotif={triggerNotif}
+            itemsSearch={itemsSearch}
+            setItemsSearch={setItemsSearch}
+          />
+        )}
+      </div>
     </div>
   );
 }

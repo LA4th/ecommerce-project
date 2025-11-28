@@ -28,6 +28,7 @@ export default function Card({
         { ...items, quantity: 1, setBrand: items.prices[0] },
       ]);
     }
+    console.log(cartItems);
     triggerNotif(); // show notification when item is added
   };
 
