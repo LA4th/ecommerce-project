@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Buttons from "../ui/Buttons";
 import AddCartItems from "./AddCartItems";
 import OrderSummary from "./OrderSummary";
 import NoItems from "/src/components/ui/NoItems";
 import { FaArrowLeft } from "react-icons/fa6";
-import { FaRegTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 export default function MobileViewPaymentMethod({ cartItems, setCartItems }) {
+  const [showDelete, setShowDelete] = useState(false);
+  const handeleToggleDelete = () => {
+    setShowDelete((prev) => !prev);
+  };
   return (
     <>
       <header className="flex flex-row items-center justify-between">
@@ -15,19 +18,33 @@ export default function MobileViewPaymentMethod({ cartItems, setCartItems }) {
           <FaArrowLeft />
         </Link>
         <h1 className="text-2xl font-bold">Review Your Order</h1>
-        <Buttons
-          id="btnDeleteAction"
-          type="button"
-          onClick={() => {}}
-          className="text-3xl"
-          icon={<FaRegTrashAlt />}
-        />
+        {!showDelete ? (
+          <Buttons
+            id="btnDeleteAction"
+            type="button"
+            onClick={handeleToggleDelete}
+            className="w-1/6 text-center"
+            btnName="Delete"
+          />
+        ) : (
+          <Buttons
+            id="btnDoneAction"
+            type="button"
+            onClick={handeleToggleDelete}
+            className="w-1/6 text-center"
+            btnName="Done"
+          />
+        )}
       </header>
       {!cartItems || cartItems.length === 0 ? (
         <NoItems />
       ) : (
         <>
-          <AddCartItems cartItems={cartItems} setCartItems={setCartItems} />
+          <AddCartItems
+            cartItems={cartItems}
+            setCartItems={setCartItems}
+            showDelete={showDelete}
+          />
           <OrderSummary cartItems={cartItems} />
           <div>
             <hr className="w-full border-gray-400" />

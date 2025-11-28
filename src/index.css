@@ -10,11 +10,12 @@
   --color-vintageGray: #393e46;
   --color-vintageWhite: #f9f8f6;
   --color-vintageGreen: #32744b;
+  --color-lightGreen: #b1ebaf;
 }
 
-/* * {
+* {
   border: 1px solid red;
-} */
+}
 
 body {
   @apply font-inter;

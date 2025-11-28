@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DesktopViewHeader from "./DesktopViewHeader";
 import MobileViewHeader from "./MobileViewHeader";
 
-export default function TheHeader() {
+export default function TheHeader({ itemsSearch, setItemsSearch }) {
   const [openSideBar, setOpenSideBar] = useState(false);
 
   return (
@@ -17,6 +17,8 @@ export default function TheHeader() {
         <MobileViewHeader
           openSideBar={openSideBar}
           setOpenSideBar={setOpenSideBar}
+          itemsSearch={itemsSearch}
+          setItemsSearch={setItemsSearch}
         />
       </div>
     </>

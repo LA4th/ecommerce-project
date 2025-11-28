@@ -1,11 +1,14 @@
 import React, { useState, useEffect, use } from "react";
 import Card from "./Card";
-import LandingSkelliton from "../ui/skelliton/LandingSkelliton";
+import LandingSkelliton from "../ui/LandingSkelliton";
 
 export default function TheFeaturedProducts({
   itemsList,
   cartItems,
   setCartItems,
+  triggerNotif,
+  itemsSearch,
+  setItemsSearch,
 }) {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -30,6 +33,9 @@ export default function TheFeaturedProducts({
           itemsList={itemsList}
           cartItems={cartItems}
           setCartItems={setCartItems}
+          triggerNotif={triggerNotif}
+          itemsSearch={itemsSearch}
+          setItemsSearch={setItemsSearch}
         />
       )}
     </>

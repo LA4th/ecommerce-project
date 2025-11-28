@@ -7,7 +7,12 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
-export default function MobileViewHeader({ openSideBar, setOpenSideBar }) {
+export default function MobileViewHeader({
+  openSideBar,
+  setOpenSideBar,
+  itemsSearch,
+  setItemsSearch,
+}) {
   return (
     <>
       <div className="w-full max-w-full flex flex-row items-center justify-between gap-x-5">
@@ -53,7 +58,10 @@ export default function MobileViewHeader({ openSideBar, setOpenSideBar }) {
       </div>
       {/* FILTER ITEMS */}
       <div className="bg-white px-4 py-1 w-full max-w-full flex flex-row items-center rounded-md">
-        <TheSearchBar />
+        <TheSearchBar
+          itemsSearch={itemsSearch}
+          setItemsSearch={setItemsSearch}
+        />
       </div>
     </>
   );

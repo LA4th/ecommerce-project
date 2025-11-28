@@ -7,6 +7,7 @@ import DataMedicine from "./components/data/DataMedicine.json";
 
 function App() {
   const [itemsList, setItemsList] = useState(null);
+  const [itemsSearch, setItemsSearch] = useState("");
   const [cartItems, setCartItems] = useState([]);
 
   useEffect(() => {
@@ -35,6 +36,8 @@ function App() {
               itemsList={itemsList}
               cartItems={cartItems}
               setCartItems={setCartItems}
+              itemsSearch={itemsSearch}
+              setItemsSearch={setItemsSearch}
             />
           }
         />

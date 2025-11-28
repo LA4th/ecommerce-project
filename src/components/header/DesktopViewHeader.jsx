@@ -1,13 +1,12 @@
 import React from "react";
 import logoMicaClick from "/logos/micaclick_logo.svg";
 import Buttons from "../ui/Buttons";
-import TheCartSideBar from "./CartSideBar";
 import TheSearchBar from "./SearchBar";
 import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-export default function DesktopViewHeader() {
+export default function DesktopViewHeader({ itemsSearch, setItemsSearch }) {
   return (
     <>
       {/* LOGO */}
@@ -25,7 +24,10 @@ export default function DesktopViewHeader() {
       </div>
       {/* FILTER ITEMS */}
       <div className="bg-white px-4 py-1 w-1/2 max-w-full flex flex-row items-center rounded-md">
-        <TheSearchBar />
+        <TheSearchBar
+          itemsSearch={itemsSearch}
+          setItemsSearch={setItemsSearch}
+        />
       </div>
       {/* BUTTONS USER & CART */}
       <div className="flex flex-row gap-x-5">
@@ -39,8 +41,6 @@ export default function DesktopViewHeader() {
           <FaShoppingCart className="text-2xl text-vintageGreen" />
         </Link>
       </div>
-      {/* CART SIDEBAR */}
-      <TheCartSideBar />
     </>
   );
 }

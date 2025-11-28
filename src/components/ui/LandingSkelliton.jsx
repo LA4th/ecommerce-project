@@ -11,7 +11,7 @@ export default function LandingSkelliton() {
               key={listIndex}
               className="p-1 w-full min-h-80 flex items-center"
             >
-              <div className="bg-vintageGray w-full h-full animate-pulse"></div>
+              <div className="bg-gray-200 w-full h-full animate-pulse"></div>
             </li>
           );
         })}

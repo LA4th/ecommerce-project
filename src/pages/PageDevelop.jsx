@@ -1,7 +1,7 @@
 import React from "react";
-import LandingSkelliton from "../components/ui/skelliton/LandingSkelliton";
-import PaymentSkelliton from "../components/ui/skelliton/PaymentSkelliton";
+import LandingSkelliton from "../components/ui/LandingSkelliton";
 import NoItem from "../components/ui/NoItems";
+import NotifMessage from "../components/ui/NotifMessage";
 
 export default function PageDevelop() {
   return (
@@ -9,6 +9,7 @@ export default function PageDevelop() {
       <LandingSkelliton />
       <PaymentSkelliton />
       <NoItem />
+      <NotifMessage />
     </>
   );
 }
