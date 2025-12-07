@@ -13,7 +13,7 @@ export default function MobileViewPaymentMethod({ cartItems, setCartItems }) {
   };
   return (
     <>
-      <header className="flex flex-row items-center justify-between">
+      <header className="w-full border-b border-gray-400 pb-1.5 max-w-full flex flex-row items-center justify-between">
         <Link to="/" className="text-3xl">
           <FaArrowLeft />
         </Link>
@@ -46,13 +46,13 @@ export default function MobileViewPaymentMethod({ cartItems, setCartItems }) {
             showDelete={showDelete}
           />
           <OrderSummary cartItems={cartItems} />
-          <div>
+          <div className="mt-auto flex flex-col items-center justify-center gap-y-5">
             <hr className="w-full border-gray-400" />
             <Buttons
               id=""
               type="submit"
               onClick={() => {}}
-              className=""
+              className="w-full py-3 rounded-md bg-vintageGreen text-vintageWhite"
               btnName="Proceed to Payment"
             />
           </div>

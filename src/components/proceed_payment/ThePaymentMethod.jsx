@@ -5,7 +5,7 @@ export default function ThePaymentMethod({ cartItems, setCartItems }) {
   return (
     <>
       {/* MOBILE VIEW */}
-      <div className="flex flex-col gap-y-5">
+      <div className="w-full max-w-full min-h-screen p-1.5 flex flex-col gap-y-5">
         <MobileViewPaymentMethod
           cartItems={cartItems}
           setCartItems={setCartItems}

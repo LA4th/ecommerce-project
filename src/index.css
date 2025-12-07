@@ -13,9 +13,9 @@
   --color-lightGreen: #b1ebaf;
 }
 
-/* * {
+* {
   border: 1px solid red;
-} */
+}
 
 body {
   @apply font-inter;
