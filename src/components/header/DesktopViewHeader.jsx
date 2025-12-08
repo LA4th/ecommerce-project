@@ -1,8 +1,6 @@
 import React from "react";
 import logoMicaClick from "/logos/micaclick_logo.svg";
-import Buttons from "../ui/Buttons";
 import TheSearchBar from "./SearchBar";
-import { FaUser } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -31,12 +29,6 @@ export default function DesktopViewHeader({ itemsSearch, setItemsSearch }) {
       </div>
       {/* BUTTONS USER & CART */}
       <div className="flex flex-row gap-x-5">
-        <Buttons
-          id="btnUserLog"
-          type="button"
-          onClick={() => {}}
-          icon={<FaUser className="text-2xl text-vintageGray" />}
-        />
         <Link to="/payment-method">
           <FaShoppingCart className="text-2xl text-vintageGreen" />
         </Link>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import TheHeader from "../components/header/TheHeader";
 import TheFeaturedProducts from "../components/featured_products/TheFeaturedProducts";
 import NotifMessage from "../components/ui/NotifMessage";
+import TheFooter from "../components/footer/TheFooter";
 
 export default function PageLanding({
   itemsList,
@@ -45,6 +46,7 @@ export default function PageLanding({
           />
         )}
       </div>
+      <TheFooter />
     </div>
   );
 }
