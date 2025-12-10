@@ -1,5 +1,5 @@
 import React from "react";
-import Inputs from "../ui/inputs";
+import Inputs from "../ui/Inputs.jsx";
 import { CiSearch } from "react-icons/ci";
 
 export default function TheSearchBar({ itemsSearch, setItemsSearch }) {
