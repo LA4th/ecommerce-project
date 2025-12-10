@@ -46,7 +46,9 @@ export default function PageLanding({
           />
         )}
       </div>
-      <TheFooter />
+      <div className="mt-1.5">
+        <TheFooter />
+      </div>
     </div>
   );
 }
